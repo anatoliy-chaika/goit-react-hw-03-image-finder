@@ -18,13 +18,14 @@ export class Image extends Component {
         <ImageGalleryItemImage
           onClick={this.openModal}
           src={img.webformatURL}
-          alt=""
+          alt={img.tags}
         />
         {this.state.isOpen && (
           <Modal
             image={img.largeImageURL}
             isOpen={this.state.isOpen}
             onClose={this.closeModal}
+            alt={img.tags}
           />
         )}
       </>
